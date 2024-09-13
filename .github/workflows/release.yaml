@@ -36,11 +36,6 @@ jobs:
       - name: install frontend dependencies
         run: pnpm install --no-frozen-lockfile # change this to npm or pnpm depending on which one you use
 
-      - name: Change Version
-        env:
-          VERSION: "${{ steps.get_version.outputs.version-without-v }}"
-        run: make change-version change-package-version
-
       - uses: oNaiPs/secrets-to-env-action@v1
         with:
           secrets: ${{ toJSON(secrets) }}
@@ -51,7 +46,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: tauri-renderer
-          path: dist/tauri/
+          path: dist/
 
   build-tauri:
     needs: [build-tauri-renderer]
@@ -151,8 +146,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          releaseId: ${{ needs.create-release.outputs.release_id }}
-          releaseBody: ${{ needs.create-release.outputs.release_body }}
           args: --target aarch64-apple-darwin
           tauriScript: cargo tauri
           updaterJsonPreferNsis: true
