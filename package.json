@@ -1,0 +1,38 @@
+{
+  "name": "tauri-app",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@tauri-apps/api": ">=2.0.0-rc.0",
+    "@tauri-apps/plugin-shell": ">=2.0.0-rc.0",
+    "@unhead/vue": "^1.11.2",
+    "@vueuse/core": "^11.0.3",
+    "unocss": "^0.62.3",
+    "vue": "^3.3.4",
+    "vue-router": "^4.4.5"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.6.0",
+    "@iconify-json/carbon": "^1.2.1",
+    "@tauri-apps/cli": ">=2.0.0-rc.0",
+    "@unocss/reset": "^0.62.3",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "eslint": "^9.10.0",
+    "typescript": "^5.2.2",
+    "unplugin-auto-import": "^0.18.3",
+    "unplugin-vue-components": "^0.27.4",
+    "unplugin-vue-router": "^0.10.8",
+    "vite": "^5.3.1",
+    "vite-plugin-vue-devtools": "^7.4.5",
+    "vue-tsc": "^2.0.22"
+  }
+}

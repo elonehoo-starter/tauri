@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+      "target": "es2016",
+      "lib": [
+          "DOM",
+          "ESNext"
+      ],
+      "jsx": "preserve",
+      "module": "ESNext",
+      "moduleResolution": "node",
+      "baseUrl": ".",
+      "types": [
+          "vite/client",
+          "unplugin-vue-router/client"
+      ],
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "strict": true,
+      "strictNullChecks": true,
+      "noUnusedLocals": true,
+      "skipLibCheck": true
+  },
+  "references": [
+      {
+          "path": "./tsconfig.node.json"
+      }
+  ],
+  "exclude": [
+      "dist",
+      "node_modules"
+  ]
+}
