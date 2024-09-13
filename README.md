@@ -1,16 +1,30 @@
-# Tauri + Vue + TypeScript
+# Tauri
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Starter template for Tauri
 
-## Recommended IDE Setup
+## Try it now!
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+### GitHub Template
 
-## Type Support For `.vue` Imports in TS
+[Create a repo from this template on GitHub](https://github.com/elonehoo-starter/tauri/generate).
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
+### Clone to local
 
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
+If you prefer to do it manually with the cleaner git history
 
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+```bash
+sudo npx degit elonehoo-starter/tauri my-tauri-app
+cd my-tauri-app
+pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
+```
+
+## Checklist
+
+When you use this template, try follow the checklist to update your info properly
+
+- [ ] Change the author name in `LICENSE`
+- [ ] Change the package name in `package.json` and package info
+- [ ] Remove the `.github` folder which contains the funding info
+- [ ] Clean up the README
+
+And, enjoy :)
