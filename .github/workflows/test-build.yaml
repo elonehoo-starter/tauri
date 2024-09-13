@@ -51,6 +51,7 @@ jobs:
         if: matrix.config.os == 'macos-latest'
         run: |
           rustup target add aarch64-apple-darwin
+          rustup target add x86_64-apple-darwin
 
       - name: install frontend dependencies
         run: pnpm install --no-frozen-lockfile # change this to npm or pnpm depending on which one you use
