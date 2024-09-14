@@ -75,8 +75,16 @@ jobs:
         with:
           releaseId: test-release
 
+      - name: Upload artifact (MacOS Universal)
+        uses: actions/upload-artifact@v3
+        if: matrix.config.os == 'macos-latest'
+        with:
+          name: tauri-client-app-artifact
+          path: |
+            ${{ fromJSON(steps.tauri-action-mac.outputs.artifactPaths)[0] }}
       - name: Upload artifact
         uses: actions/upload-artifact@v3
+        if: matrix.config.os != 'macos-latest'
         with:
           name: tauri-client-app-artifact
           path: |
