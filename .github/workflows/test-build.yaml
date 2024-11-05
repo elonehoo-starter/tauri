@@ -14,6 +14,9 @@ jobs:
           - os: ubuntu-latest
             arch: x86_64
             rust_target: x86_64-unknown-linux-gnu
+          - os: ubuntu-latest
+            arch: aarch64
+            rust_target: aarch64-unknown-linux-gnu
           - os: macos-13
             arch: x86_64
             rust_target: x86_64-apple-darwin
